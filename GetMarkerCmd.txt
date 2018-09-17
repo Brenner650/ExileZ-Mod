@@ -1,0 +1,9 @@
+_zedMarkers = [];mpos = []; msize = []; mname = [];
+{
+mpos = getMarkerPos _x;
+msize = getMarkersize _x;
+mname = text _x;
+_zedMarkers = _zedMarkers + [[mpos select 0, mpos select 1,msize select 0],mname];
+}
+foreach allMapMarkers;
+copyToClipboard str _zedMarkers;
